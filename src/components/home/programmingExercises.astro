@@ -75,50 +75,56 @@ import { t } from "astro-i18n";
         </p>
       </div>
       <div class="flex flex-col gap-4 flex-1">
-        <div class="flex justify-between items-center ps-4 pe-4">
-          <h2 class="font-bold">GitLab + Jenkins</h2>
-          <div class="flex h-8 lg:h-12 gap-8">
-            <a href="https://www.jenkins.io">
-              <Icon name="simple-icons:jenkins" class="h-8 lg:h-12" title="Jenkins" />
-            </a>
-            <a href="https://gitlab.com">
-              <Icon name="simple-icons:gitlab" class="h-8 lg:h-12" title="GitLab" />
-            </a>
-            <Picture
-              src={logoImage}
-              alt="Artemis"
-              widths={[40, 80]}
-              aspectRatio="1:1"
-              sizes="(max-width: 800px) 32px, 48px"
-            />
+        <div class="flex justify-between items-start ps-4 pe-4 gap-4">
+          <div class="flex-1">
+            <h2 class="font-bold">
+              {t("programmingExercises.integration.cards.git.title")}
+            </h2>
+            <p class="text-slate-200 text-sm lg:text-base">
+              {t("programmingExercises.integration.cards.git.description")}
+            </p>
           </div>
+          <Picture
+            src={logoImage}
+            alt="Artemis"
+            widths={[40, 80]}
+            aspectRatio="1:1"
+            sizes="(max-width: 800px) 32px, 48px"
+          />
         </div>
-        <div class="flex justify-between items-center ps-4 pe-4">
-          <h2 class="font-bold">GitLab CI</h2>
-          <div class="flex h-8 lg:h-12 gap-8">
-            <a href="https://gitlab.com">
-              <Icon name="simple-icons:gitlab" class="h-8 lg:h-12" title="GitLab" />
-            </a>
-            <Picture
-              src={logoImage}
-              alt="Artemis"
-              widths={[40, 80]}
-              aspectRatio="1:1"
-              sizes="(max-width: 800px) 32px, 48px"
-            />
+        <div class="flex justify-between items-start ps-4 pe-4 gap-4">
+          <div class="flex-1">
+            <h2 class="font-bold">
+              {t("programmingExercises.integration.cards.ci.title")}
+            </h2>
+            <p class="text-slate-200 text-sm lg:text-base">
+              {t("programmingExercises.integration.cards.ci.description")}
+            </p>
           </div>
+          <Picture
+            src={logoImage}
+            alt="Artemis"
+            widths={[40, 80]}
+            aspectRatio="1:1"
+            sizes="(max-width: 800px) 32px, 48px"
+          />
         </div>
-        <div class="flex justify-between items-center ps-4 pe-4">
-          <h2 class="font-bold">Standalone</h2>
-          <div class="flex h-8 lg:h-12 gap-8">
-            <Picture
-              src={logoImage}
-              alt="Artemis"
-              widths={[40, 80]}
-              aspectRatio="1:1"
-              sizes="(max-width: 800px) 32px, 48px"
-            />
+        <div class="flex justify-between items-start ps-4 pe-4 gap-4">
+          <div class="flex-1">
+            <h2 class="font-bold">
+              {t("programmingExercises.integration.cards.batteries.title")}
+            </h2>
+            <p class="text-slate-200 text-sm lg:text-base">
+              {t("programmingExercises.integration.cards.batteries.description")}
+            </p>
           </div>
+          <Picture
+            src={logoImage}
+            alt="Artemis"
+            widths={[40, 80]}
+            aspectRatio="1:1"
+            sizes="(max-width: 800px) 32px, 48px"
+          />
         </div>
       </div>
     </div>

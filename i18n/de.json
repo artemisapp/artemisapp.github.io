@@ -65,10 +65,24 @@
     "imageAlt": "Artemis Editor-Ansicht",
     "description": "Artemis bietet einen umfassenden Rahmen für Programmieraufgaben. Es integriert sich mit Versionskontrollsystemen und bietet automatisches Feedback auf Basis von Testfällen und statischer Codeanalyse. Mit Unterstützung für mehrere Sprachen ist Artemis die ideale Lösung für eine vielfältige Auswahl an Kursen.",
     "integration": {
-      "title": "Nahtlose Integration mit Ihren CI/CD-Tools",
-      "description": "Artemis integriert sich mühelos in beliebte CI/CD-Plattformen, um Ihren bestehenden Workflow zu ergänzen.",
-      "platforms": "Wähle aus einer Vielzahl von unterstützten Plattformen, einschließlich GitLab und Jenkins.",
-      "standalone": "Oder nutze einfach Artemis als eigenständige Lösung - es liegt an dir!"
+      "title": "Git & CI inklusive",
+      "description": "Artemis liefert jetzt eine integrierte Git-Verwaltung und Continuous Integration mit, sodass Kurse in wenigen Minuten startklar sind.",
+      "platforms": "Artemis Git und Artemis CI werden für jede Lehrveranstaltung automatisch bereitgestellt.",
+      "standalone": "Externe CI/CD-Systeme werden nicht mehr benötigt oder unterstützt – alles läuft direkt in Artemis.",
+      "cards": {
+        "git": {
+          "title": "Artemis Git",
+          "description": "Integriertes Git-Hosting richtet automatisch Start-, Muster- und Studierenden-Repositories mit passenden Zugriffsrechten ein."
+        },
+        "ci": {
+          "title": "Artemis CI",
+          "description": "Continuous-Integration-Pipelines laufen direkt in Artemis und liefern automatisiertes Feedback, ohne dass eigene Server verwaltet werden müssen."
+        },
+        "batteries": {
+          "title": "Alles inklusive",
+          "description": "Externe CI/CD-Integrationen sind nicht nötig oder unterstützt; richten Sie Kurse in Minuten ein, alles läuft innerhalb von Artemis."
+        }
+      }
     },
     "assessment": {
       "title": "Automatisierte Bewertung",

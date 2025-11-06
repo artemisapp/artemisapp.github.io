@@ -65,10 +65,24 @@
     "imageAlt": "Artemis Editor View",
     "description": "Artemis provides a comprehensive framework for programming exercises. It integrates with version control systems and offers automated feedback based on test cases and static code analysis. With support for multiple languages, Artemis is an ideal solution for a diverse range of courses.",
     "integration": {
-      "title": "Seamless Integration with Your CI/CD Tools",
-      "description": "Artemis integrates effortlessly with popular CI/CD platforms to complement your existing workflow.",
-      "platforms": "Choose from a variety of supported platforms, including GitLab and Jenkins.",
-      "standalone": "Or just use Artemis as a standalone solution - it's up to you!"
+      "title": "Batteries-Included Git & CI",
+      "description": "Artemis now ships with built-in Git hosting and continuous integration, so courses are ready to go in minutes.",
+      "platforms": "Artemis Git and Artemis CI are provisioned automatically for every course.",
+      "standalone": "External CI/CD systems are no longer required or supported; everything runs inside Artemis.",
+      "cards": {
+        "git": {
+          "title": "Artemis Git",
+          "description": "Built-in Git hosting provisions starter, solution, and student repositories with access rules applied automatically."
+        },
+        "ci": {
+          "title": "Artemis CI",
+          "description": "Continuous integration pipelines run directly in Artemis, delivering automated feedback without managing external servers."
+        },
+        "batteries": {
+          "title": "Batteries Included",
+          "description": "No external CI/CD integrations are needed or supported; set up courses in minutes with everything running inside Artemis."
+        }
+      }
     },
     "assessment": {
       "title": "Automated Assessment",
