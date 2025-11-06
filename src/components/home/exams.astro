@@ -4,7 +4,7 @@ import Container from "../container.astro";
 import examParticipateImage from "../../assets/exam-participate.png";
 import examStatsImage from "../../assets/exam-stats.jpg";
 import examAssessmentImage from "../../assets/exam-assessment.png";
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 import Glowbar from "../ui/eyecandy/glowbar.astro";
 import { t } from "astro-i18n";
 ---
@@ -41,12 +41,11 @@ import { t } from "astro-i18n";
     <div class="mt-16 -mb-18 exam-img">
       <Picture
         src={examParticipateImage}
-        placeholder="dominant-color"
         alt={t("examMode.imageAlt")}
         widths={[1920]}
         sizes="(max-width: 800px) 100vw, 80%"
         loading="eager"
-        format="avif"
+        formats={["avif", "webp"]}
         class="rounded-xl shadow-xl"
       />
     </div>
@@ -62,12 +61,11 @@ import { t } from "astro-i18n";
       <div class="flex gap-16 flex-1 items-center justify-center">
         <Picture
           src={examStatsImage}
-          placeholder="dominant-color"
           alt={t("examMode.statsImageAlt")}
           widths={[1920]}
           sizes="(max-width: 800px) 100vw, 100%"
           loading="eager"
-          format="avif"
+          formats={["avif", "webp"]}
           class="rounded-lg shadow-xl"
         />
       </div>
@@ -99,12 +97,11 @@ import { t } from "astro-i18n";
       <div class="flex gap-16 flex-1 items-center justify-center">
         <Picture
           src={examAssessmentImage}
-          placeholder="dominant-color"
           alt={t("examMode.assessmentImageAlt")}
           widths={[1920]}
           sizes="(max-width: 800px) 100vw, 100%"
           loading="eager"
-          format="avif"
+          formats={["avif", "webp"]}
           class="rounded-lg shadow-xl"
         />
       </div>

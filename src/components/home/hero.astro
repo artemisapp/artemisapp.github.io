@@ -1,8 +1,8 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 import screenImage from "assets/screen.png";
 import Link from "@components/ui/link.astro";
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { l, t } from "astro-i18n";
 import Container from "../container.astro";
 
@@ -103,13 +103,11 @@ const universities = [
     <div class="py-6 block mt-12">
       <Picture
         src={screenImage}
-        placeholder="dominant-color"
         alt="Artemis Exercise View"
         widths={[1920]}
-        aspectRatio="16:9"
         sizes="(max-width: 800px) 100vw, 80%"
         loading="eager"
-        format="avif"
+        formats={["avif", "webp"]}
         class="screen-image"
       />
     </div>
@@ -121,7 +119,7 @@ const universities = [
     <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap pb-24">
       { universities.map((uni) => (
         <a href={uni.href} title={uni.title} class="uni-logo-link">
-          <Picture src={uni.logo} placeholder="dominant-color" widths={[400]} loading="eager" format="avif" style={{ maxHeight: '100%' }} />
+          <Picture src={uni.logo} widths={[400]} loading="eager" formats={["webp"]} style={{ maxHeight: '100%' }} alt={uni.title} />
         </a>
       )) }
     </div>

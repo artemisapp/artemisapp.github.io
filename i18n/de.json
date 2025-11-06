@@ -131,7 +131,8 @@
     "developers": {
       "title": "Entwickler",
       "description": "Diejenigen, die die Magie geschehen lassen."
-    }
+    },
+    "loadError": "Das Team kann aktuell nicht angezeigt werden. Bitte versuchen Sie es später erneut."
   },
   "contact": {
     "title": "Kontaktieren Sie uns",

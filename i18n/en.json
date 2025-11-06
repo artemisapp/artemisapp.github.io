@@ -131,7 +131,8 @@
     "developers": {
         "title": "Developers",
         "description": "The ones who make the magic happen."
-    }
+    },
+    "loadError": "We are unable to display the team roster right now. Please try again later."
   },
   "contact": {
     "title": "Contact Us",

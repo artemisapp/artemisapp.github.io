@@ -1,9 +1,9 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 import OnVisibleWrapper from "../ui/eyecandy/OnVisibleWrapper.astro";
 import Container from "../container.astro";
 import screenImage from "../../assets/editor.png";
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 import Glowbar from "../ui/eyecandy/glowbar.astro";
 import logoImage from "../../assets/logo.png";
 import { t } from "astro-i18n";
@@ -41,12 +41,11 @@ import { t } from "astro-i18n";
     <div class="mt-16 -mb-18 pg-img">
       <Picture
         src={screenImage}
-        placeholder="dominant-color"
         alt={t("programmingExercises.imageAlt")}
         widths={[1920]}
         sizes="(max-width: 800px) 100vw, 80%"
         loading="eager"
-        format="avif"
+        formats={["avif", "webp"]}
         class="rounded-xl shadow-xl"
       />
     </div>
@@ -88,8 +87,8 @@ import { t } from "astro-i18n";
             src={logoImage}
             alt="Artemis"
             widths={[40, 80]}
-            aspectRatio="1:1"
             sizes="(max-width: 800px) 32px, 48px"
+            formats={["webp"]}
           />
         </div>
         <div class="flex justify-between items-start ps-4 pe-4 gap-4">
@@ -105,8 +104,8 @@ import { t } from "astro-i18n";
             src={logoImage}
             alt="Artemis"
             widths={[40, 80]}
-            aspectRatio="1:1"
             sizes="(max-width: 800px) 32px, 48px"
+            formats={["webp"]}
           />
         </div>
         <div class="flex justify-between items-start ps-4 pe-4 gap-4">
@@ -122,8 +121,8 @@ import { t } from "astro-i18n";
             src={logoImage}
             alt="Artemis"
             widths={[40, 80]}
-            aspectRatio="1:1"
             sizes="(max-width: 800px) 32px, 48px"
+            formats={["webp"]}
           />
         </div>
       </div>
@@ -165,7 +164,7 @@ import { t } from "astro-i18n";
     <div
       class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
       <a href="https://www.oracle.com/java/" target="_blank">
-        <Icon class="h-8 md:h-12" name="simple-icons:java" title="Java" />
+        <Icon class="h-8 md:h-12" name="simple-icons:openjdk" title="Java" />
       </a>
       <a href="https://developer.apple.com/swift/" target="_blank">
         <Icon class="h-8 md:h-12" name="simple-icons:swift" title="Swift" />

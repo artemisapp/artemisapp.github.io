@@ -3,9 +3,9 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
 import logoImage from "assets/logo.png";
-import Icon from "astro-icon";
 import { astroI18n, l, t } from "astro-i18n";
 
 const menuitems: {
@@ -39,13 +39,13 @@ const langIcons = {
   en: "emojione:flag-for-united-states",
 };
 
-const langRoutes = astroI18n.langCodes
-  .filter((langCode) => langCode !== astroI18n.langCode) // optional (excludes current language)
-  .map((langCode) => {
+const langRoutes = astroI18n.locales
+  .filter((locale) => locale !== astroI18n.locale) // optional (excludes current language)
+  .map((locale) => {
     return {
-      langCode: langCode,
-      route: l(Astro.url.pathname, {}, langCode),
-      flagIcon: langIcons[langCode],
+      langCode: locale,
+      route: l(Astro.url.pathname, {}, locale),
+      flagIcon: langIcons[locale],
     };
   });
 ---
@@ -55,7 +55,7 @@ const langRoutes = astroI18n.langCodes
     <Astronav>
       <div class="flex w-full flex-1 lg:w-auto items-center justify-between">
         <a href={l("/")} class="text-2xl flex gap-5">
-          <Picture src={logoImage} alt="Artemis" widths={[40]} sizes="40px" />
+          <Picture src={logoImage} alt="Artemis" widths={[40]} sizes="40px" formats={["webp"]} />
           <span class="font-bold text-slate-200">Artemis</span>
         </a>
         <div class="block lg:hidden">
