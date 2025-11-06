@@ -1,11 +1,16 @@
-import { defineAstroI18nConfig } from "astro-i18n"
+import { defineAstroI18nConfig } from "astro-i18n";
+import en from "./i18n/en.json";
+import de from "./i18n/de.json";
 
 export default defineAstroI18nConfig({
-	defaultLangCode: "en",
-	supportedLangCodes: ["de"],
-	showDefaultLangCode: false,
-	translations: {
-		"en": "i18n/en.json",
-		"de": "i18n/de.json",
-	},
-})
+  primaryLocale: "en",
+  secondaryLocales: ["de"],
+  fallbackLocale: "en",
+  showPrimaryLocale: false,
+  translations: {
+    common: {
+      en,
+      de,
+    },
+  },
+});
