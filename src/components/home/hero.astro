@@ -117,11 +117,19 @@ const universities = [
       {t("hero.usedBy")}
     </h2>
     <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap pb-24">
-      { universities.map((uni) => (
-        <a href={uni.href} title={uni.title} class="uni-logo-link">
-          <Picture src={uni.logo} widths={[400]} loading="eager" formats={["webp"]} style={{ maxHeight: '100%' }} alt={uni.title} />
+      {universities.map((uni) => (
+        <a href={uni.href} title={uni.title} class="uni-logo-link inline-flex items-center">
+          <Picture
+            src={uni.logo}
+            alt={uni.title}
+            layout="none"
+            loading="lazy"
+            imgAttributes={{
+              style: "height: 100%; width: auto; max-width: 200px;",
+            }}
+          />
         </a>
-      )) }
+      ))}
     </div>
   </div>
 </Container>
